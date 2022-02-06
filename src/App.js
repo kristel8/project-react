@@ -1,12 +1,14 @@
 import './App.css';
-import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
-import { Navbar } from './components/NavBar/NavBar';
+import { NavbarContainer } from './components/NavBar/NavBar';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css'
+import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
 
 function App() {
   return (
       <>
-        <Navbar/>
-        <ItemListContainer greeting={'Hola, te esperábamos!'}/>
+        <NavbarContainer/>
+        <ItemListContainer/>
       </>
 
 
