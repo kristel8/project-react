@@ -2,23 +2,22 @@
 
 import { CartWidget } from "../CartWidget/CartWidget"
 import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap"
+import { Link } from "react-router-dom"
 
 export const NavbarContainer = (  ) => {
   return (
   <Navbar bg="dark" variant="dark" expand="lg">
   <Container>
-    <Navbar.Brand href="#home">MeGame</Navbar.Brand>
+  <Link to="/" className="navbar-brand">Booki</Link>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar id="basic-navbar-nav">
       <Nav className="me-auto">
-        <Nav.Link href="#home">Inicio</Nav.Link>
-        <Nav.Link href="#link">Nosotros</Nav.Link>
+      <Link to="/" className="nav-link">Inicio</Link>
+      <Link to="/nosotros" className="nav-link">Nosotros</Link>
         <NavDropdown title="Categorías" id="basic-nav-dropdown">
-          <NavDropdown.Item href="#action/3.1">Acción</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.2">Aventura</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.3">Terror</NavDropdown.Item>
-          <NavDropdown.Divider />
-          <NavDropdown.Item href="#action/3.4">Todos</NavDropdown.Item>
+          <Link to="/accion" className="dropdown-item">Acción</Link>
+          <Link to="/aventura" className="dropdown-item">Aventura</Link>
+          <Link to="/terror" className="dropdown-item">Terror</Link>
         </NavDropdown>
         <CartWidget icono="bi bi-cart"/>
         <CartWidget icono="bi bi-person"/>
@@ -26,5 +25,7 @@ export const NavbarContainer = (  ) => {
     </Navbar>
   </Container>
 </Navbar>
+
+
   )
 }
