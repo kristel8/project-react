@@ -15,9 +15,9 @@ export const NavbarContainer = (  ) => {
       <Link to="/" className="nav-link">Inicio</Link>
       <Link to="/nosotros" className="nav-link">Nosotros</Link>
         <NavDropdown title="Categorías" id="basic-nav-dropdown">
-          <Link to="/accion" className="dropdown-item">Acción</Link>
-          <Link to="/aventura" className="dropdown-item">Aventura</Link>
-          <Link to="/terror" className="dropdown-item">Terror</Link>
+          <Link to="/accion" className="dropdown-item">Fantasia</Link>
+          <Link to="/aventura" className="dropdown-item">Romance</Link>
+          <Link to="/terror" className="dropdown-item">Suspenso</Link>
         </NavDropdown>
         <CartWidget icono="bi bi-cart"/>
         <CartWidget icono="bi bi-person"/>
