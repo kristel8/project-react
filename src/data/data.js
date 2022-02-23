@@ -2,6 +2,7 @@
 export const data = [
     {
         nombre: 'Lightning in a Mirror',
+        autor: 'Jayne Ann Castle',
         id: 1,
         descripcion: 'Lorem ipsum producto 1',
         precio: 1500,
@@ -11,6 +12,7 @@ export const data = [
     },
     {
         nombre: 'Iron Widow',
+        autor: 'Xiran Jay Zhao',
         id: 2,
         descripcion: 'Lorem ipsum producto 2',
         precio: 2500,
@@ -20,6 +22,7 @@ export const data = [
     },
     {
         nombre: 'When You Get the Chance',
+        autor: 'Emma Lord',
         id: 3,
         descripcion: 'Lorem ipsum producto 3',
         precio: 3500,
@@ -29,6 +32,7 @@ export const data = [
     },
     {
         nombre: 'Getting His Game Back',
+        autor: 'Gia De Cadenet',
         id: 4,
         descripcion: 'Lorem ipsum producto 4',
         precio: 4500,
@@ -38,6 +42,7 @@ export const data = [
     },
     {
         nombre: 'Running Wild',
+        autor: 'K.A. Tucker',
         id: 5,
         descripcion: 'Lorem ipsum producto 5',
         precio: 5500,

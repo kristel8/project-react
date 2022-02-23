@@ -8,10 +8,13 @@ import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetail
 import { Nosotros } from './components/Nosotros';
 import { NavbarContainer } from './components/NavBar/NavBar';
 import { Footer } from './components/Footer/Footer';
+import { Cart } from './components/Cart/Cart';
+import { CartProvider } from './components/CartContext/CartContext';
 
 function App() {
   return (
     <>
+      <CartProvider>
       <BrowserRouter>
 
         <NavbarContainer />
@@ -21,13 +24,14 @@ function App() {
           <Route path='/productos/:catId' element={<ItemListContainer />} />
           <Route path='/detail/:itemId' element={<ItemDetailContainer />} />
           <Route path="/nosotros" element={<Nosotros />} />
-
+          <Route path='/cart' element={ <Cart/> } />
           {/* <Route path='/404' element={ <Error404/> }/> */}
           <Route path='*' element={<Navigate to='/' />} />
         </Routes>
 
         <Footer/>
       </BrowserRouter>
+      </CartProvider>
 
     </>
 

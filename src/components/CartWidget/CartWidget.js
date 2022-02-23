@@ -1,9 +1,16 @@
-import React from 'react';
+import { useContext } from 'react'
+import { BsFillCartFill } from 'react-icons/bs'
+import { Link } from 'react-router-dom'
+import { CartContext } from '../CartContext/CartContext'
 
-export const CartWidget = ( { icono } ) => {
+export const CartWidget = () => {
+
+    const { cantidadCart } = useContext(CartContext)
+
     return (
-        <>
-            <i className={icono}></i>
-        </>
-    );
-};
+        <Link to="/cart" className='cart-widget'>
+            <BsFillCartFill/>
+            <span>{ cantidadCart() }</span>
+        </Link>
+    )
+}

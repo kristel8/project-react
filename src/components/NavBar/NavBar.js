@@ -19,8 +19,8 @@ export const NavbarContainer = (  ) => {
           <Link to="/aventura" className="dropdown-item">Romance</Link>
           <Link to="/terror" className="dropdown-item">Suspenso</Link>
         </NavDropdown>
-        <CartWidget icono="bi bi-cart"/>
-        <CartWidget icono="bi bi-person"/>
+        <CartWidget/>
+        {/* <CartWidget icono="bi bi-person"/> */}
       </Nav>
     </Navbar>
   </Container>
