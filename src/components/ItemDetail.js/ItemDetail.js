@@ -5,19 +5,21 @@ import { ItemCount } from "../ItemCount/ItemCount"
 
 export const ItemDetail = ({ id, nombre, autor, img, desc, precio, stock, categoria }) => {
     const [cantidad, setCantidad] = useState(0)
-
     const { agregarAlCarrito, isInCart } = useContext(CartContext)
 
-    const handleAgregar = () => {
+
+    const onAdd = (e) => {
+        console.log(e)
         if (cantidad === 0) return
 
-        if (!isInCart(id)) {
-            const addItem = {
-                id, nombre, precio, stock, cantidad
-            }
+        // if (!isInCart(id)) {
 
-            agregarAlCarrito(addItem)
+        // }
+
+        const addItem = {
+            id, nombre, autor, img, desc, precio, stock, categoria, cantidad
         }
+        agregarAlCarrito(addItem)
     }
 
     return (
@@ -30,27 +32,30 @@ export const ItemDetail = ({ id, nombre, autor, img, desc, precio, stock, catego
             <h5>Precio: ${precio}</h5>
 
             {
-                isInCart(id)
-                    ? <Link to="/cart" className="btn btn-success my-3">
-                        Terminar mi compra
-                    </Link>
-                    :
-                    <>
-                        <ItemCount
-                            max={stock}
-                            counter={cantidad}
-                            setCounter={setCantidad}
-                        />
 
-                        <button
-                            className="btn btn-success my-2"
-                            onClick={handleAgregar}
-                        >
-                            Agregar al carrito
-                        </button>
-                    </>
+
+                <>
+
+                    <ItemCount
+                        max={stock}
+                        counter={cantidad}
+                        setCounter={setCantidad}
+                        onAdd={onAdd}
+                    />
+
+
+                </>
             }
 
         </div>
     )
 }
+
+/*                 isInCart(id)
+                    ? <>
+                    <Link to="/cart" className="btn btn-success my-3">
+                        Terminar mi compra
+                    </Link>
+                    </>
+                    
+                    : */

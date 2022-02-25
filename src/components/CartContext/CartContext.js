@@ -7,7 +7,15 @@ export const CartProvider = ({children}) => {
     const [cart, setCart] = useState([])
 
     const agregarAlCarrito = (item) => {
-      setCart( [...cart, item] )
+      if(!isInCart(item.id)) {
+        setCart( [...cart, item] )
+      } else {
+        let itemAgregado = cart.filter( e => e.id === item.id);
+        itemAgregado[0].cantidad += item.cantidad; 
+        // let items = cart.filter( e => e.id !== item.id );
+        // items.push( itemAgregado )
+        setCart( [...cart] )
+      }
     }
 
     const isInCart = (id) => {
