@@ -12,8 +12,6 @@ export const CartProvider = ({children}) => {
       } else {
         let itemAgregado = cart.filter( e => e.id === item.id);
         itemAgregado[0].cantidad += item.cantidad; 
-        // let items = cart.filter( e => e.id !== item.id );
-        // items.push( itemAgregado )
         setCart( [...cart] )
       }
     }

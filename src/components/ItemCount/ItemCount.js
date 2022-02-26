@@ -1,5 +1,4 @@
-import React, { useContext } from 'react'
-import { CartContext } from '../CartContext/CartContext'
+import React from 'react'
 
 export const ItemCount = ({  max, min = 0, counter, setCounter, onAdd }) => {
 
@@ -21,7 +20,7 @@ export const ItemCount = ({  max, min = 0, counter, setCounter, onAdd }) => {
 
             <button
                 className="btn btn-success my-2"
-                onClick={onAdd}
+                onClick={ () => onAdd( counter )}
             >
                 Agregar al carrito
             </button>
