@@ -10,6 +10,7 @@ import { NavbarContainer } from './components/NavBar/NavBar';
 import { Footer } from './components/Footer/Footer';
 import { Cart } from './components/Cart/Cart';
 import { CartProvider } from './components/CartContext/CartContext';
+import Checkout from './components/Checkout/Checkout';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path='/detail/:itemId' element={<ItemDetailContainer />} />
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path='/cart' element={ <Cart/> } />
+          <Route path='/checkout' element={ <Checkout/> } />
           {/* <Route path='/404' element={ <Error404/> }/> */}
           <Route path='*' element={<Navigate to='/' />} />
         </Routes>
